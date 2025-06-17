@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "hairbnb-database": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\Admin\\PycharmProjects\\hairbnb_backend\\mcp\\hairbnb-mcp-server.js"
+      ],
+      "env": {
+        "DB_HOST": "localhost",
+        "DB_PORT": "5432",
+        "DB_NAME": "dbhairbnb",
+        "DB_USER": "postgres",
+        "DB_PASSWORD": "Soul2003",
+        "PROJECT_ROOT": "C:\\Users\\Admin\\PycharmProjects\\hairbnb_backend"
+      }
+    },
+    "hairbnb-filesystem": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\Admin\\PycharmProjects\\hairbnb_backend\\mcp\\hairbnb-file-server.js"
+      ],
+      "env": {
+        "ALLOWED_DIRECTORIES": "C:\\Users\\Admin\\PycharmProjects\\hairbnb_backend",
+        "PROJECT_NAME": "hairbnb_backend"
+      }
+    }
+  }
+}

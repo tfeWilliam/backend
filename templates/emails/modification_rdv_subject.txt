@@ -1,0 +1,1 @@
+Modification de votre rendez-vous chez {{ salon_nom }}

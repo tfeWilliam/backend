@@ -1,0 +1,142 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class node6 as "django.db.models.base.Model"
+class node10 as "django.db.models.utils.AltersData"
+class node7 as "hairbnb.models.AIConversation"
+class node5 as "hairbnb.models.AIMessage"
+class node15 as "hairbnb.models.TblAdresse"
+class node32 as "hairbnb.models.TblAvis"
+class node8 as "hairbnb.models.TblAvisStatut"
+class node19 as "hairbnb.models.TblCart"
+class node17 as "hairbnb.models.TblCartItem"
+class node34 as "hairbnb.models.TblCategorie"
+class node20 as "hairbnb.models.TblClient"
+class node27 as "hairbnb.models.TblCoiffeuse"
+class node31 as "hairbnb.models.TblCoiffeuseSalon"
+class node35 as "hairbnb.models.TblEmailNotification"
+class node37 as "hairbnb.models.TblEmailStatus"
+class node18 as "hairbnb.models.TblEmailType"
+class node36 as "hairbnb.models.TblFavorite"
+class node28 as "hairbnb.models.TblHoraireCoiffeuse"
+class node25 as "hairbnb.models.TblIndisponibilite"
+class node14 as "hairbnb.models.TblLocalite"
+class node21 as "hairbnb.models.TblMethodePaiement"
+class node24 as "hairbnb.models.TblPaiement"
+class node0 as "hairbnb.models.TblPaiementStatut"
+class node1 as "hairbnb.models.TblPrix"
+class node26 as "hairbnb.models.TblPromotion"
+class node13 as "hairbnb.models.TblRendezVous"
+class node11 as "hairbnb.models.TblRendezVousService"
+class node16 as "hairbnb.models.TblRole"
+class node38 as "hairbnb.models.TblRue"
+class node2 as "hairbnb.models.TblSalon"
+class node30 as "hairbnb.models.TblSalonImage"
+class node29 as "hairbnb.models.TblSalonService"
+class node9 as "hairbnb.models.TblService"
+class node4 as "hairbnb.models.TblServicePrix"
+class node22 as "hairbnb.models.TblServiceTemps"
+class node33 as "hairbnb.models.TblSexe"
+class node12 as "hairbnb.models.TblTemps"
+class node23 as "hairbnb.models.TblTransaction"
+class node3 as "hairbnb.models.TblType"
+class node40 as "hairbnb.models.TblUser"
+class object
+
+node6  "1" -[#595959,plain]-* "1" node10 
+node10 "1" -[#595959,plain]-* "1" object 
+node7  "1" -[#595959,plain]-* "1" node6  
+node7  "0..*" -[#595959,plain]-* "1" node40 
+node5  "1" -[#595959,plain]-* "1" node6  
+node5  "0..*" -[#595959,plain]-* "1" node7  
+node15 "1" -[#595959,plain]-* "1" node6  
+node15 "0..*" -[#595959,plain]-* "1" node38 
+node32 "1" -[#595959,plain]-* "1" node6  
+node32 "0..*" -[#595959,plain]-* "1" node8  
+node32 "0..*" -[#595959,plain]-* "1" node20 
+node32 "0..*" -[#595959,plain]-* "1" node13 
+node32 "0..*" -[#595959,plain]-* "1" node2  
+node8  "1" -[#595959,plain]-* "1" node6  
+node19 "1" -[#595959,plain]-* "1" node6  
+node19 "1" -[#595959,plain]-* "1" node40 
+node17 "1" -[#595959,plain]-* "1" node6  
+node17 "0..*" -[#595959,plain]-* "1" node19 
+node17 "0..*" -[#595959,plain]-* "1" node9  
+node34 "1" -[#595959,plain]-* "1" node6  
+node20 "1" -[#595959,plain]-* "1" node6  
+node20 "0..*" -[#595959,plain]-* "1" node40 
+node27 "1" -[#595959,plain]-* "1" node6  
+node27 "1" -[#595959,plain]-* "1" node40 
+node31 "1" -[#595959,plain]-* "1" node6  
+node31 "0..*" -[#595959,plain]-* "1" node27 
+node31 "0..*" -[#595959,plain]-* "1" node2  
+node35 "1" -[#595959,plain]-* "1" node6  
+node35 "0..*" -[#595959,plain]-* "1" node37 
+node35 "0..*" -[#595959,plain]-* "1" node18 
+node35 "0..*" -[#595959,plain]-* "1" node13 
+node35 "0..*" -[#595959,plain]-* "1" node2  
+node35 "0..*" -[#595959,plain]-* "1" node40 
+node37 "1" -[#595959,plain]-* "1" node6  
+node18 "1" -[#595959,plain]-* "1" node6  
+node36 "1" -[#595959,plain]-* "1" node6  
+node36 "0..*" -[#595959,plain]-* "1" node2  
+node36 "0..*" -[#595959,plain]-* "1" node40 
+node28 "1" -[#595959,plain]-* "1" node6  
+node28 "0..*" -[#595959,plain]-* "1" node27 
+node25 "1" -[#595959,plain]-* "1" node6  
+node25 "0..*" -[#595959,plain]-* "1" node27 
+node14 "1" -[#595959,plain]-* "1" node6  
+node21 "1" -[#595959,plain]-* "1" node6  
+node24 "1" -[#595959,plain]-* "1" node6  
+node24 "0..*" -[#595959,plain]-* "1" node21 
+node24 "0..*" -[#595959,plain]-* "1" node0  
+node24 "0..*" -[#595959,plain]-* "1" node13 
+node24 "0..*" -[#595959,plain]-* "1" node40 
+node0  "1" -[#595959,plain]-* "1" node6  
+node1  "1" -[#595959,plain]-* "1" node6  
+node26 "1" -[#595959,plain]-* "1" node6  
+node26 "0..*" -[#595959,plain]-* "1" node2  
+node26 "0..*" -[#595959,plain]-* "1" node9  
+node13 "1" -[#595959,plain]-* "1" node6  
+node13 "0..*" -[#595959,plain]-* "1" node20 
+node13 "0..*" -[#595959,plain]-* "1" node27 
+node13 "0..*" -[#595959,plain]-* "1" node2  
+node11 "1" -[#595959,plain]-* "1" node6  
+node11 "0..*" -[#595959,plain]-* "1" node13 
+node11 "0..*" -[#595959,plain]-* "1" node9  
+node16 "1" -[#595959,plain]-* "1" node6  
+node38 "1" -[#595959,plain]-* "1" node6  
+node38 "0..*" -[#595959,plain]-* "1" node14 
+node2  "1" -[#595959,plain]-* "1" node6  
+node2  "0..*" -[#595959,plain]-* "1" node15 
+node2  "0..*" -[#595959,plain]-* "0..*" node27 : "through = 'TblCoiffeuseSalon';"
+node2  "0..*" -[#595959,plain]-* "0..*" node9  : "through = 'TblSalonService';"
+node30 "1" -[#595959,plain]-* "1" node6  
+node30 "0..*" -[#595959,plain]-* "1" node2  
+node29 "1" -[#595959,plain]-* "1" node6  
+node29 "0..*" -[#595959,plain]-* "1" node2  
+node29 "0..*" -[#595959,plain]-* "1" node9  
+node9  "1" -[#595959,plain]-* "1" node6  
+node9  "0..*" -[#595959,plain]-* "1" node34 
+node4  "1" -[#595959,plain]-* "1" node6  
+node4  "0..*" -[#595959,plain]-* "1" node1  
+node4  "0..*" -[#595959,plain]-* "1" node2  
+node4  "0..*" -[#595959,plain]-* "1" node9  
+node22 "1" -[#595959,plain]-* "1" node6  
+node22 "0..*" -[#595959,plain]-* "1" node2  
+node22 "0..*" -[#595959,plain]-* "1" node9  
+node22 "0..*" -[#595959,plain]-* "1" node12 
+node33 "1" -[#595959,plain]-* "1" node6  
+node12 "1" -[#595959,plain]-* "1" node6  
+node23 "1" -[#595959,plain]-* "1" node6  
+node23 "0..*" -[#595959,plain]-* "1" node24 
+node3  "1" -[#595959,plain]-* "1" node6  
+node40 "1" -[#595959,plain]-* "1" node6  
+node40 "0..*" -[#595959,plain]-* "1" node15 
+node40 "0..*" -[#595959,plain]-* "1" node16 
+node40 "0..*" -[#595959,plain]-* "1" node33 
+node40 "0..*" -[#595959,plain]-* "1" node3  
+@enduml

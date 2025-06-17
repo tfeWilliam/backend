@@ -1,0 +1,75 @@
+# === FICHIERS SECRETS - NE JAMAIS COMMIT ===
+.env
+.env.example
+.env.local
+.env.production
+.env.test
+*.env
+
+# Clés et certificats
+secrets/
+*.pem
+*.key
+*.crt
+firebase_credentials.json
+
+# Base de données
+*.sqlite3
+*.db
+
+# Logs
+logs/
+*.log
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Media uploads
+media/uploads/
+staticfiles/
+
+# Vercel
+.vercel
+
+# Node modules (si utilisé)
+node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# Pytest
+.pytest_cache/
+
+# Django stuff
+local_settings.py
+db.sqlite3-journal
+
+# Backup files
+*.bak
+*.backup
+*.tmp

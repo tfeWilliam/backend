@@ -1,0 +1,1 @@
+web: gunicorn hairbnb_backend.wsgi --log-file -

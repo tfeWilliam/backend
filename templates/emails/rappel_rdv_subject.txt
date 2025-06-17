@@ -1,0 +1,1 @@
+Rappel : votre rendez-vous chez {{ salon_nom }} est demain

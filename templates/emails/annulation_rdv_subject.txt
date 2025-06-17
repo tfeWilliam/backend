@@ -1,0 +1,1 @@
+Annulation de votre rendez-vous chez {{ salon_nom }}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #6A3DE8;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 0 0 5px 5px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+        .reminder {
+            background-color: #e6f7ff;
+            border-left: 4px solid #1890ff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Rappel de rendez-vous</h1>
+        </div>
+        <div class="content">
+            <p>Bonjour {{ prenom }},</p>
+
+            <div class="reminder">
+                <p>Nous vous rappelons que vous avez rendez-vous <strong>demain</strong> à {{ date_heure|date:"H:i" }} chez {{ salon_nom }}.</p>
+            </div>
+
+            {% if services %}
+            <p>Récapitulatif de votre réservation :</p>
+            <ul>
+                {% for service in services %}
+                <li>{{ service.nom }} ({{ service.duree }} min)</li>
+                {% endfor %}
+            </ul>
+            <p>Durée totale : {{ duree_totale }} min</p>
+            {% endif %}
+
+            <p>En cas d'empêchement, merci de nous prévenir au plus tôt.</p>
+
+            <p>À demain !</p>
+            <p>L'équipe de {{ salon_nom }}</p>
+        </div>
+        <div class="footer">
+            <p>Cet email a été envoyé automatiquement, merci de ne pas y répondre.</p>
+            <p>© {% now "Y" %} HairBnB - Tous droits réservés</p>
+        </div>
+    </div>
+</body>
+</html>

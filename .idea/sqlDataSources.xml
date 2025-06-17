@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="a9adf21a-8200-4e50-9db1-07f17d4fc408" name="dbhairbnb">
+      <data-sources db="e81467e7-9a60-45d2-afd8-5c6fe2ea8602" ddl="036b216e-c961-4df3-9b95-8fbee0b53b58" />
+      <scope>
+        <node kind="database" negative="1" />
+      </scope>
+    </mapping>
+    <mapping uuid="aecc01ec-294c-425a-adca-fdce3240d1ab" name="postgres@localhost Mapping">
+      <data-sources db="e81467e7-9a60-45d2-afd8-5c6fe2ea8602" ddl="6ad475dc-490c-4047-a37d-29bcaa9aed60" />
+    </mapping>
+  </component>
+</project>
